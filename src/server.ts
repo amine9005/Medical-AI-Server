@@ -2,6 +2,7 @@ import express, { Request, Response } from "express";
 import { clerkMiddleware, requireAuth } from "@clerk/express";
 import AI_Router from "./Routes/AI.Router";
 import Session_Router from "./Routes/Session.Router";
+import Users_Router from "./Routes/User.Router";
 import cors from "cors";
 import dotenv from "dotenv";
 dotenv.config();
@@ -16,6 +17,7 @@ app.use(requireAuth());
 
 app.use("/api/ai", AI_Router);
 app.use("/api/session", Session_Router);
+app.use("/api/user", Users_Router);
 
 app.get("/", (req: Request, res: Response) => {
   res.send("Server is running!");

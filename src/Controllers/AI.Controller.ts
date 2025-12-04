@@ -95,7 +95,7 @@ export const generateMedicalReport = async (req: Request, res: Response) => {
 
     const data = await db
       .update(sessionChatTable)
-      .set({ report: report })
+      .set({ report: report, conversation: messages })
       .where(eq(sessionChatTable.sessionId, sessionId))
       .returning();
 

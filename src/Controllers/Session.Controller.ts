@@ -4,7 +4,7 @@ import { getAuth } from "@clerk/express";
 import { db } from "../Configs/db";
 import { sessionChatTable } from "../Models/Session.Model";
 import { uuid } from "uuidv4";
-import { eq } from "drizzle-orm";
+import { desc, eq } from "drizzle-orm";
 
 export const saveSession = async (req: CustomRequest, res: Response) => {
   try {
@@ -32,7 +32,7 @@ export const saveSession = async (req: CustomRequest, res: Response) => {
       .insert(sessionChatTable)
       .values({
         sessionId: uuid(),
-        note: notes,
+        notes: notes,
         selectedDoctor: selectedDoctor,
         createdBy: userId,
         createdOn: new Date().toISOString(),
@@ -81,7 +81,8 @@ export const getSessions = async (req: CustomRequest, res: Response) => {
     const data = await db
       .select()
       .from(sessionChatTable)
-      .where(eq(sessionChatTable.createdBy, userId));
+      .where(eq(sessionChatTable.createdBy, userId))
+      .orderBy(desc(sessionChatTable.createdOn));
     return res
       .status(200)
       .json({ success: true, message: "Session found successfully", data });
