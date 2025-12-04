@@ -12,15 +12,15 @@ const app = express();
 app.use(express.json());
 app.use(cors({ origin: process.env.ALLOWED_ORIGIN }));
 
+app.get("/", (req: Request, res: Response) => {
+  res.send("Server is running!");
+});
+
 app.use(clerkMiddleware());
 app.use(requireAuth());
 
 app.use("/api/ai", AI_Router);
 app.use("/api/session", Session_Router);
 app.use("/api/user", Users_Router);
-
-app.get("/", (req: Request, res: Response) => {
-  res.send("Server is running!");
-});
 
 export default app;
