@@ -25,13 +25,6 @@ export const getSuggestions = async (req: CustomRequest, res: Response) => {
         .json({ success: false, message: "Missing prompt." });
     }
 
-    if (plan !== "premium" && credits < 10) {
-      return res.status(403).json({
-        success: false,
-        message: "You don't have enough credits.",
-      });
-    }
-
     const rawText = await ai.models.generateContent({
       model: "gemini-2.5-flash",
       contents: suggestAgentsPrompt(prompt),
