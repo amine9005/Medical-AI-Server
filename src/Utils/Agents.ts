@@ -6,7 +6,7 @@ export const AIDoctorAgents = [
     image: "/doctor1.png",
     agentPrompt:
       "You are a friendly General Physician AI. Greet the user and quickly ask what symptoms they’re experiencing. Keep responses short and helpful.",
-    voiceId: "will",
+    voiceId: "MZb4jD8N3GIedB0K3Xoi",
     subscriptionRequired: false,
   },
   {
@@ -16,7 +16,7 @@ export const AIDoctorAgents = [
     image: "/doctor2.png",
     agentPrompt:
       "You are a kind Pediatrician AI. Ask brief questions about the child’s health and share quick, safe suggestions.",
-    voiceId: "chris",
+    voiceId: "mCQMfsqGDT6IDkEKR20a",
     subscriptionRequired: true,
   },
   {
@@ -26,7 +26,7 @@ export const AIDoctorAgents = [
     image: "/doctor3.png",
     agentPrompt:
       "You are a knowledgeable Dermatologist AI. Ask short questions about the skin issue and give simple, clear advice.",
-    voiceId: "sarge",
+    voiceId: "DwwuoY7Uz8AP8zrY5TAo",
     subscriptionRequired: true,
   },
   {
@@ -36,7 +36,7 @@ export const AIDoctorAgents = [
     image: "/doctor4.png",
     agentPrompt:
       "You are a caring Psychologist AI. Ask how the user is feeling emotionally and give short, supportive tips.",
-    voiceId: "susan",
+    voiceId: "GDzHdQOi6jjf8zaXhCYD",
     subscriptionRequired: true,
   },
   {
@@ -46,7 +46,7 @@ export const AIDoctorAgents = [
     image: "/doctor5.png",
     agentPrompt:
       "You are a motivating Nutritionist AI. Ask about current diet or goals and suggest quick, healthy tips.",
-    voiceId: "eileen",
+    voiceId: "Kq9pDHHIMmJsG9PEqOtv",
     subscriptionRequired: true,
   },
   {
@@ -56,7 +56,7 @@ export const AIDoctorAgents = [
     image: "/doctor6.png",
     agentPrompt:
       "You are a calm Cardiologist AI. Ask about heart symptoms and offer brief, helpful advice.",
-    voiceId: "charlotte",
+    voiceId: "25bLwNw4T14AIILU3SLV",
     subscriptionRequired: true,
   },
   {
@@ -66,7 +66,7 @@ export const AIDoctorAgents = [
     image: "/doctor7.png",
     agentPrompt:
       "You are a friendly ENT AI. Ask quickly about ENT symptoms and give simple, clear suggestions.",
-    voiceId: "ayla",
+    voiceId: "02y4x5i9YrzYlFvGo1pp",
     subscriptionRequired: true,
   },
   {
@@ -76,7 +76,7 @@ export const AIDoctorAgents = [
     image: "/doctor8.png",
     agentPrompt:
       "You are an understanding Orthopedic AI. Ask where the pain is and give short, supportive advice.",
-    voiceId: "aaliyah",
+    voiceId: "8N2ng9i2uiUWqstgmWlH",
     subscriptionRequired: true,
   },
   {
@@ -86,7 +86,7 @@ export const AIDoctorAgents = [
     image: "/doctor9.png",
     agentPrompt:
       "You are a respectful Gynecologist AI. Ask brief, gentle questions and keep answers short and reassuring.",
-    voiceId: "hudson",
+    voiceId: "bFr1v73huN7dLcVKbWRD",
     subscriptionRequired: true,
   },
   {
@@ -96,7 +96,7 @@ export const AIDoctorAgents = [
     image: "/doctor10.png",
     agentPrompt:
       "You are a cheerful Dentist AI. Ask about the dental issue and give quick, calming suggestions.",
-    voiceId: "atlas",
+    voiceId: "DqJyltrKaeMDuX3dXkp4",
     subscriptionRequired: true,
   },
 ];
