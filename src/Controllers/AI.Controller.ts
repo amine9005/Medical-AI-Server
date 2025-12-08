@@ -16,8 +16,6 @@ const ai = new GoogleGenAI({});
 export const getSuggestions = async (req: CustomRequest, res: Response) => {
   try {
     const { prompt } = req.body;
-    const plan = req.plan;
-    const credits = req.credits;
 
     if (!prompt) {
       return res
@@ -26,7 +24,7 @@ export const getSuggestions = async (req: CustomRequest, res: Response) => {
     }
 
     const rawText = await ai.models.generateContent({
-      model: "gemini-2.5-flash",
+      model: "gemma-3-27b-it",
       contents: suggestAgentsPrompt(prompt),
     });
 
@@ -71,7 +69,7 @@ export const generateMedicalReport = async (req: Request, res: Response) => {
     }
 
     const rawText = await ai.models.generateContent({
-      model: "gemini-2.5-flash",
+      model: "gemma-3-27b-it",
       contents: generateMedicalReportPrompt(
         sessionId,
         messages,
